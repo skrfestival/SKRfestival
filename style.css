@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,67 +5,81 @@ body {
   color: #a3005e;
   scroll-behavior: smooth;
 }
-
-.hero {
+header {
   background-color: #DAA5BD;
   color: white;
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 3rem;
+  position: relative;
 }
-
-.hero-content h1 {
+header h1 {
   font-size: 4rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
-
-.hero-content .subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
+header .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-
+#countdown {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 30px;
+}
+nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background-color: #DAA5BD;
+  padding-top: 4rem;
+  z-index: 999;
+}
 nav a {
-  margin: 0.5rem;
+  display: block;
+  padding: 1rem;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  text-align: left;
+}
+nav a:hover {
+  background-color: #C20077;
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.button {
+  display: inline-block;
   background-color: #C20077;
   color: white;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 25px;
+  text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
-
-nav a:hover {
-  background-color: #a3005e;
-}
-
-main {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-section.highlight {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 footer {
   background-color: #DAA5BD;
   color: white;
   text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
+  padding: 2rem 1rem;
 }
-
-.footer-links a {
-  color: white;
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
 #scrollTopBtn {
   display: none;
   position: fixed;

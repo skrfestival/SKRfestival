@@ -3,54 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SKR FESTIVAL</title>
+  <title>SKR Festival</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script defer>
+    function toggleMenu() {
+      const nav = document.getElementById("menu");
+      nav.style.display = nav.style.display === "block" ? "none" : "block";
+    }
+    function updateCountdown() {
+      const eventDate = new Date("2026-02-21T00:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "The festival has started!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content" data-aos="fade-down">
-      <h1>SKR FESTIVAL</h1>
-      <p class="subtitle">A rising K-POP event that will leave you breathless</p>
-      <nav>
-        <a href="about.html">Who Are We?</a>
-        <a href="program.html">Program</a>
-        <a href="guests.html">Guests</a>
-        <a href="city.html">Why Toulouse?</a>
-        <a href="partners.html">Partners</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <h1>SKR FESTIVAL</h1>
+    <p class="subtitle">a rising K-POP event that will leave you breathless</p>
+    <div id="countdown">Loading countdown...</div>
   </header>
 
+  <nav id="menu">
+    <a href="#who">Who Are We?</a>
+    <a href="#program">Program</a>
+    <a href="#guests">Guests</a>
+    <a href="#city">Why Toulouse?</a>
+    <a href="#partners">Partners</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <section class="highlight" data-aos="fade-up">
-      <h2>Experience the heart of K-culture</h2>
-      <p>Join thousands of fans and artists in Toulouse for an unforgettable celebration of Korean pop, dance, and fashion.</p>
+    <section id="who"><h2>Who Are We?</h2><p>We organize a full weekend dedicated to K-pop and Korean culture...</p></section>
+    <section id="program"><h2>Festival Program</h2><p>Concerts, workshops, K-village and more!</p></section>
+    <section id="guests"><h2>Guests</h2><p>Meet idols, dancers and creators of the K-culture world.</p></section>
+    <section id="city"><h2>Why Toulouse?</h2><p>A perfect cultural and logistic hub for SKR Festival in Europe.</p></section>
+    <section id="partners"><h2>Our Partners</h2><p>Thanks to our partners: Samsung, Samyang, and more.</p></section>
+    <section id="gallery"><h2>Gallery</h2><p>Photos from previous editions will appear here.</p></section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For questions and applications:</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwPVZx-EDG0IFlBUUwU85zkfJchxkQLCnFRkNENfRMLkU5Q/viewform?embedded=true"
+              width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 SKR Festival. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="contact.html">How to Contact Us</a> |
-      <a href="https://instagram.com/skrfestival" target="_blank">Instagram</a> |
-      <a href="https://twitter.com/skrfestival" target="_blank">Twitter</a>
-    </div>
   </footer>
 
   <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
     let mybutton = document.getElementById("scrollTopBtn");
     window.onscroll = function() {
-      mybutton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+      mybutton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
     };
     function topFunction() {
-      document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
   </script>
