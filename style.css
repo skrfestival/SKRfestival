@@ -1,0 +1,87 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F8F8F8;
+  color: #a3005e;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-color: #DAA5BD;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin: 0.5rem;
+  text-decoration: none;
+  background-color: #C20077;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #a3005e;
+}
+
+main {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+section.highlight {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #DAA5BD;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #C20077;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+#scrollTopBtn:hover {
+  background-color: #a3005e;
+}

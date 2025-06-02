@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKR FESTIVAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content" data-aos="fade-down">
+      <h1>SKR FESTIVAL</h1>
+      <p class="subtitle">A rising K-POP event that will leave you breathless</p>
+      <nav>
+        <a href="about.html">Who Are We?</a>
+        <a href="program.html">Program</a>
+        <a href="guests.html">Guests</a>
+        <a href="city.html">Why Toulouse?</a>
+        <a href="partners.html">Partners</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="highlight" data-aos="fade-up">
+      <h2>Experience the heart of K-culture</h2>
+      <p>Join thousands of fans and artists in Toulouse for an unforgettable celebration of Korean pop, dance, and fashion.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SKR Festival. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="contact.html">How to Contact Us</a> |
+      <a href="https://instagram.com/skrfestival" target="_blank">Instagram</a> |
+      <a href="https://twitter.com/skrfestival" target="_blank">Twitter</a>
+    </div>
+  </footer>
+
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    let mybutton = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      mybutton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
