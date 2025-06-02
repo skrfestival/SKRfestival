@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - SKR Festival</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .back-home {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back-home" href="index.html">☰</a>
+    <h1>Gallery</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>Photos from previous events and teaser previews.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SKR Festival. All rights reserved.</p>
+  </footer>
+
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+  <script>
+    let mybutton = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      mybutton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
