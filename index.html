@@ -8,7 +8,7 @@
   <script defer>
     function toggleMenu() {
       const nav = document.getElementById("menu");
-      nav.style.display = nav.style.display === "block" ? "none" : "block";
+      nav.classList.toggle("active");
     }
     function updateCountdown() {
       const eventDate = new Date("2026-02-21T00:00:00").getTime();
@@ -27,6 +27,17 @@
     }
     setInterval(updateCountdown, 1000);
   </script>
+  <style>
+    nav.active { display: block !important; }
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -37,13 +48,14 @@
   </header>
 
   <nav id="menu">
-    <a href="#who">Who Are We?</a>
-    <a href="#program">Program</a>
-    <a href="#guests">Guests</a>
-    <a href="#city">Why Toulouse?</a>
-    <a href="#partners">Partners</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
+    <a href="#who" onclick="toggleMenu()">Who Are We?</a>
+    <a href="#program" onclick="toggleMenu()">Program</a>
+    <a href="#guests" onclick="toggleMenu()">Guests</a>
+    <a href="#city" onclick="toggleMenu()">Why Toulouse?</a>
+    <a href="#partners" onclick="toggleMenu()">Partners</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
   </nav>
 
   <main>
