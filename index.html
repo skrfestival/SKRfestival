@@ -71,21 +71,45 @@
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwPVZx-EDG0IFlBUUwU85zkfJchxkQLCnFRkNENfRMLkU5Q/viewform?embedded=true"
               width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
-  </main>
+  
+<section id="rgpd">
+  <h2>GDPR / Data Request</h2>
+  <p>If you wish to access, correct or delete your personal data collected by SKR Festival, please fill out the form below:</p>
+  <form action="mailto:contact@skrfest.com" method="post" enctype="text/plain" style="max-width: 600px; margin: auto;">
+    <label for="name">Your Name:</label><br>
+    <input type="text" name="name" id="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" name="email" id="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"><br>
+
+    <label for="request">Your Request:</label><br>
+    <textarea name="request" id="request" rows="5" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"></textarea><br>
+
+    <button type="submit" class="button">Submit Request</button>
+  </form>
+</section>
+
+</main>
 
     <footer>
     <p>&copy; 2025 SKR Festival. All rights reserved. | <a href="terms.html" style="color:white; text-decoration: underline;">Terms & Conditions</a></p>
+    <footer>
+    <p>&copy; 2025 SKR Festival. All rights reserved. |
+    <a href="terms.html" style="color:white; text-decoration: underline;">Terms & Conditions</a> |
+    <a href="privacy.html" style="color:white; text-decoration: underline;">Privacy Policy</a></p>
   </footer>
-
-  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#DAA5BD;color:white;padding:1rem;text-align:center;z-index:1000;">
+    This website uses cookies to enhance your experience.
+    <button onclick="acceptCookies()" style="background:#C20077;color:white;border:none;padding:0.5rem 1rem;margin-left:1rem;cursor:pointer;">Accept</button>
+  </div>
   <script>
-    let mybutton = document.getElementById("scrollTopBtn");
-    window.onscroll = function() {
-      mybutton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
-    };
-    function topFunction() {
-      document.documentElement.scrollTop = 0;
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'yes');
     }
+    window.onload = function() {
+      if (localStorage.getItem('cookiesAccepted') === 'yes') {
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
+    };
   </script>
-</body>
-</html>
