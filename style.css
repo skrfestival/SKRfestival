@@ -98,3 +98,28 @@ footer {
 #scrollTopBtn:hover {
   background-color: #a3005e;
 }
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.close-icon,
+.close-label {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover .close-icon,
+.close-btn:hover .close-label {
+  color: #C20077;
+}
