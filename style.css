@@ -137,3 +137,22 @@ nav.active {
 .close-btn:hover .close-label {
   color: #C20077;
 }
+
+/* ----------- OVERLAY POUR MENU BURGER ----------- */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* noir transparent */
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+nav.active ~ #overlay {
+  opacity: 1;
+  pointer-events: all;
+}
