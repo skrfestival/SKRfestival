@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Why Toulouse? – SKR FESTIVAL</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Toulouse? - SKR Festival</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .back-home {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SKR FESTIVAL</h1>
-        <p class="subtitle">A rising K-POP event that will leave you breathless</p>
-        <nav><a href="index.html">Home</a>
-<a href="about.html">Who Are We?</a>
-<a href="program.html">Program</a>
-<a href="guests.html">Guests</a>
-<a href="city.html">Why Toulouse?</a>
-<a href="partners.html">Partners</a>
-<a href="contact.html">Contact</a>
-<a href="terms.html">Terms & Conditions</a></nav>
-    </header>
-    <main>
+  <header>
+    <a class="back-home" href="index.html">☰</a>
+    <h1>Why Toulouse?</h1>
+  </header>
 
-        <h2>Why Toulouse?</h2>
-        <p>Toulouse strengthens its ties with Asia through Airbus and its Asian Hub. Hosting SKR Festival boosts its international visibility and local economy.</p>
-        <ul>
-            <li>🌍 International visibility via Arirang TV broadcast in 116 countries</li>
-            <li>💼 Economic benefits for hotels, restaurants, and local businesses</li>
-            <li>🎯 Cultural positioning as a European K-culture hub</li>
-        </ul>
-    
-        <h2>Why Toulouse?</h2><p>Explore why Toulouse is the ideal place for K-culture...</p>
-    </main>
-    
-<footer>
+  <main>
+    <section>
+      <p>Toulouse is a strategic hub for European-Asian exchanges, offering modern venues and a vibrant local culture ideal for SKR Festival.</p>
+    </section>
+  </main>
+
+  <footer>
     <p>&copy; 2025 SKR Festival. All rights reserved.</p>
-    <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="mailto:k.rose.asso@gmail.com">How to Contact Us</a> |
-        <a href="https://instagram.com/skrfestival" target="_blank">Instagram</a> |
-        <a href="https://twitter.com/skrfestival" target="_blank">Twitter</a>
-    </div>
-</footer>
+  </footer>
 
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+  <script>
+    let mybutton = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      mybutton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>

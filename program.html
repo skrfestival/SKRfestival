@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Program – SKR FESTIVAL</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festival Program - SKR Festival</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .back-home {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SKR FESTIVAL</h1>
-        <p class="subtitle">A rising K-POP event that will leave you breathless</p>
-        <nav><a href="index.html">Home</a>
-<a href="about.html">Who Are We?</a>
-<a href="program.html">Program</a>
-<a href="guests.html">Guests</a>
-<a href="city.html">Why Toulouse?</a>
-<a href="partners.html">Partners</a>
-<a href="contact.html">Contact</a>
-<a href="terms.html">Terms & Conditions</a></nav>
-    </header>
-    <main>
+  <header>
+    <a class="back-home" href="index.html">☰</a>
+    <h1>Festival Program</h1>
+  </header>
 
-        <h2>Festival Program</h2>
-        <p><strong>Date:</strong> November 2025 or Jan/Feb 2026<br>
-        <strong>Location:</strong> Centre des Congrès Pierre Baudis, Toulouse<br>
-        <strong>Concert Venues:</strong> Palais des Sports, Zénith de Toulouse, MEETT</p>
+  <main>
+    <section>
+      <p>A full lineup of K-pop concerts, cultural workshops, and a K-village filled with stands, games, and cuisine.</p>
+    </section>
+  </main>
 
-        <ul>
-            <li>🎤 K-pop Concerts: 5–6 rookie groups + 2 solo artists (including 1 French artist)</li>
-            <li>🏙️ K-Village: 80–100 cultural stands (fashion, food, tech...)</li>
-            <li>🎭 Workshops: dance, singing, language, cooking</li>
-            <li>🎉 After Party: exclusive K-Fashion show for professionals</li>
-        </ul>
-    
-        <h2>Festival Program</h2><p>Discover concerts, workshops, and cultural stands...</p>
-    </main>
-    
-<footer>
+  <footer>
     <p>&copy; 2025 SKR Festival. All rights reserved.</p>
-    <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="mailto:k.rose.asso@gmail.com">How to Contact Us</a> |
-        <a href="https://instagram.com/skrfestival" target="_blank">Instagram</a> |
-        <a href="https://twitter.com/skrfestival" target="_blank">Twitter</a>
-    </div>
-</footer>
+  </footer>
 
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+  <script>
+    let mybutton = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      mybutton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>

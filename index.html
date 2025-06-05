@@ -1,37 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home – SKR FESTIVAL</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKR Festival</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    function toggleMenu() {
+      const nav = document.getElementById("menu");
+      nav.classList.toggle("active");
+    }
+    function updateCountdown() {
+      const eventDate = new Date("2026-02-21T00:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "The festival has started!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
+  <style>
+    nav.active { display: block !important; }
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SKR FESTIVAL</h1>
-        <p class="subtitle">A rising K-POP event that will leave you breathless</p>
-        <nav><a href="index.html">Home</a>
-<a href="about.html">Who Are We?</a>
-<a href="program.html">Program</a>
-<a href="guests.html">Guests</a>
-<a href="city.html">Why Toulouse?</a>
-<a href="partners.html">Partners</a>
-<a href="contact.html">Contact</a>
-<a href="terms.html">Terms & Conditions</a></nav>
-    </header>
-    <main>
-        <h2>Welcome to SKR Festival</h2><p>Dive into K-culture and feel the rhythm of K-pop!</p>
-    </main>
-    
-<footer>
-    <p>&copy; 2025 SKR Festival. All rights reserved.</p>
-    <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="mailto:k.rose.asso@gmail.com">How to Contact Us</a> |
-        <a href="https://instagram.com/skrfestival" target="_blank">Instagram</a> |
-        <a href="https://twitter.com/skrfestival" target="_blank">Twitter</a>
-    </div>
-</footer>
+  <header>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <h1>SKR FESTIVAL</h1>
+    <p class="subtitle">a rising K-POP event that will leave you breathless</p>
+    <div id="countdown">Loading countdown...</div>
+  </header>
 
-</body>
-</html>
+  <nav id="menu">
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
+    <a href="#who" onclick="toggleMenu()">Who Are We?</a>
+    <a href="#program" onclick="toggleMenu()">Program</a>
+    <a href="#guests" onclick="toggleMenu()">Guests</a>
+    <a href="#city" onclick="toggleMenu()">Why Toulouse?</a>
+    <a href="#partners" onclick="toggleMenu()">Partners</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </nav>
+
+  <main>
+    <section id="who"><h2>Who Are We?</h2>
+<p>SKR Festival is a cultural initiative founded by a collective passionate about Korean culture. Our mission is to promote the Hallyu wave through an immersive, inclusive and festive event open to all. We believe in the power of cultural bridges and in giving voice to the talents shaping K-culture in Europe and Asia.</p>
+<p>Our core values are authenticity, celebration, diversity, and innovation. With each edition, we strive to strengthen the cultural link between Korea and the European youth, particularly in the South of France.</p>Who Are We?</h2><p>We organize a full weekend dedicated to K-pop and Korean culture...</p></section>
+    <section id="program"><h2>Festival Program</h2>
+<p>SKR Festival unfolds over a vibrant weekend dedicated to the Hallyu wave. Attendees will enjoy:</p>
+<ul>
+  <li><strong>Concerts:</strong> With popular and emerging K-pop artists.</li>
+  <li><strong>K-Village:</strong> A cultural market with food, fashion, and Korean games.</li>
+  <li><strong>Workshops:</strong> Dance, calligraphy, hanbok fitting, and language discovery.</li>
+  <li><strong>After Party:</strong> Featuring Korean DJs and themed activities.</li>
+</ul>
+<p>The event will be held across key venues in Toulouse including the Zénith, MEETT and Pierre Baudis Centre, welcoming between 4,000 to 8,500 visitors.</p>Festival Program</h2><p>Concerts, workshops, K-village and more!</p></section>
+    <section id="guests"><h2>Guests</h2>
+<p>The festival is honored to welcome:</p>
+<ul>
+  <li>🎤 <strong>Serri</strong> – former member of Dalshabet</li>
+  <li>🎬 <strong>Kim Seon-ho</strong> – star of "Hometown Cha-Cha-Cha" (Netflix)</li>
+  <li>🕺 Renowned <strong>K-pop choreographer</strong></li>
+  <li>🎨 Korean and French influencers, creators and artists</li>
+</ul>Guests</h2><p>Meet idols, dancers and creators of the K-culture world.</p></section>
+    <section id="city"><h2>Why Toulouse?</h2>
+<p>Toulouse stands as a strategic, dynamic and culturally rich European city. With modern infrastructures, international exposure and a vibrant youth community, it provides the perfect backdrop for SKR Festival.</p>
+<p>As the 4th largest city in France and a hub for aerospace, tech, and culture, Toulouse ensures logistical convenience, strong media coverage and significant tourist potential.</p>Why Toulouse?</h2><p>A perfect cultural and logistic hub for SKR Festival in Europe.</p></section>
+    <section id="partners"><h2>Our Partners</h2>
+<p>We proudly collaborate with key cultural and corporate partners to make the SKR Festival a success:</p>
+<ul>
+  <li>Samsung, Samyang (official sponsors)</li>
+  <li>Arirang TV, SBYME, K-Rose</li>
+  <li>In discussions: Airbus, France 3, Toulouse FM, Centre Culturel Coréen</li>
+</ul>
+<p><img src="Logos.png" alt="Partner Logos" style="width:100%;max-width:800px;display:block;margin:auto;"></p>Our Partners</h2><p>Thanks to our partners: Samsung, Samyang, and more.</p></section>
+    <section id="gallery"><h2>Gallery</h2>
+<p>Relive the best moments from past editions, teaser videos and more coming soon.</p>Gallery</h2><p>Photos from previous editions will appear here.</p></section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For questions and applications:</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwPVZx-EDG0IFlBUUwU85zkfJchxkQLCnFRkNENfRMLkU5Q/viewform?embedded=true"
+              width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+  
+
+
+</main>
+
+    <footer>
+    <p>&copy; 2025 SKR Festival. All rights reserved. | <a href="terms.html" style="color:white; text-decoration: underline;">Terms & Conditions</a></p>
+    <footer>
+    <p>&copy; 2025 SKR Festival. All rights reserved. |
+    <a href="terms.html" style="color:white; text-decoration: underline;">Terms & Conditions</a> |
+    <a href="privacy.html" style="color:white; text-decoration: underline;">Privacy Policy</a></p>
+  </footer>
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#DAA5BD;color:white;padding:1rem;text-align:center;z-index:1000;">
+    This website uses cookies to enhance your experience.
+    <button onclick="acceptCookies()" style="background:#C20077;color:white;border:none;padding:0.5rem 1rem;margin-left:1rem;cursor:pointer;">Accept</button>
+  </div>
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'yes');
+    }
+    window.onload = function() {
+      if (localStorage.getItem('cookiesAccepted') === 'yes') {
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
+    };
+  </script>
