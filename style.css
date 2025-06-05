@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -45,6 +46,9 @@ nav {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   display: block;
+}
+nav.active {
+  transform: translateX(0);
 }
 nav a {
   display: block;
@@ -100,19 +104,22 @@ footer {
 #scrollTopBtn:hover {
   background-color: #a3005e;
 }
-
-/* Animation slide-in pour le menu */
-nav {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  display: block; /* toujours block pour activer l’animation, on masque via transform */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
-
-nav.active {
-  transform: translateX(0);
+nav.active ~ #overlay {
+  opacity: 1;
+  pointer-events: all;
 }
-
-/* Style du bouton Close avec effet hover */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -125,34 +132,13 @@ nav.active {
   color: white;
   transition: color 0.3s ease;
 }
-
 .close-icon,
 .close-label {
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
 .close-btn:hover .close-icon,
 .close-btn:hover .close-label {
   color: #C20077;
-}
-
-/* ----------- OVERLAY POUR MENU BURGER ----------- */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* noir transparent */
-  z-index: 998;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-nav.active ~ #overlay {
-  opacity: 1;
-  pointer-events: all;
 }

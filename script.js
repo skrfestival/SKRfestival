@@ -1,9 +1,9 @@
+
 function toggleMenu() {
   const nav = document.getElementById("menu");
   nav.classList.toggle("active");
 }
 
-// Compte à rebours jusqu'au 21 février 2026
 function updateCountdown() {
   const eventDate = new Date("2026-02-21T00:00:00").getTime();
   const now = new Date().getTime();
