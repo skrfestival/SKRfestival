@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f2e6ef;
   color: #333;
   line-height: 1.6;
   padding: 20px;
@@ -45,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007BFF;
+  color: #e3b8d9;
 }
 
 main {
@@ -53,7 +53,7 @@ main {
   margin: 0 auto;
   padding: 20px;
   background: #ffffff;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #f2e6ef;
   border-radius: 8px;
 }
 
@@ -71,7 +71,7 @@ footer {
 
 .cta-button {
   display: inline-block;
-  background-color: #007BFF;
+  background-color: #e3b8d9;
   color: #fff;
   padding: 12px 18px;
   margin: 10px 5px;
@@ -81,5 +81,5 @@ footer {
   transition: background-color 0.3s ease;
 }
 .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #e3b8d9;
 }
