@@ -10,7 +10,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2e6ef;
-  color: #333;
+  color: #b3529a;
   line-height: 1.6;
   padding: 20px;
 }
@@ -24,7 +24,7 @@ header {
 
 header h1 {
   text-align: center;
-  color: #222;
+  color: #b3529a;
 }
 
 nav ul {
@@ -40,7 +40,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #444;
+  color: #b3529a;
   font-weight: bold;
 }
 
@@ -66,7 +66,7 @@ footer {
   margin-top: 40px;
   padding: 20px;
   font-size: 0.9em;
-  color: #666;
+  color: #b3529a;
 }
 
 .cta-button {
