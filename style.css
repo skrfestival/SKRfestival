@@ -112,3 +112,21 @@ footer {
   background-color: #b3529a;
   color: white;
 }
+
+.cta-button {
+  display: inline-block;
+  background-color: #e3b8d9;      /* Rose clair */
+  color: #333;
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #b3529a;      /* Violet rosé au survol */
+  color: #fff;
+  transform: translateY(-2px);    /* Petit effet d’élévation */
+}
