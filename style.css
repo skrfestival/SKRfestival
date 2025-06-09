@@ -69,6 +69,7 @@ footer {
   color: #b3529a;
 }
 
+/*CTA BUTTON*/
 .cta-button {
   display: inline-block;
   background-color: #e3b8d9;
@@ -84,6 +85,7 @@ footer {
   background-color: #e3b8d9;
 }
 
+/*LANGUAGE BUTTONS*/
 .lang-selector {
   text-align: right;
   margin: 20px;
@@ -113,6 +115,7 @@ footer {
   color: white;
 }
 
+/*CTA BUTTON SURVOL*/
 .cta-button {
   display: inline-block;
   background-color: #e3b8d9;      /* Rose clair */
