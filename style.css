@@ -83,3 +83,32 @@ footer {
 .cta-button:hover {
   background-color: #e3b8d9;
 }
+
+.lang-selector {
+  text-align: right;
+  margin: 20px;
+}
+
+.lang-selector button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  margin-left: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.lang-selector button:hover {
+  background-color: #007BFF;
+  color: white;
+  transform: scale(1.05);
+}
+
+.lang-selector button:focus {
+  outline: none;
+  background-color: #0056b3;
+  color: white;
+}
