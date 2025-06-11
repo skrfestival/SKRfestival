@@ -221,7 +221,7 @@ footer {
 }
 
 .fan-zone {
-  margin: 0 auto;
+  grid-column: 1 / -1;
+  justify-self: center;
   text-align: center;
-  flex-basis: 100%;
 }
