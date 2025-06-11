@@ -250,22 +250,45 @@ h2, h4 {
   }
 }
 
-/* ==== SECTION ÉQUIPE - Carte organisateur (ex: SBYME) ==== */
+/* === ÉQUIPE / TEAM – Structure et style === */
 .team-section {
   margin: 40px 0;
+  padding: 20px;
+  background-color: #fff7fd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(179, 82, 154, 0.1);
 }
 
 .team-card {
   text-align: center;
-  background: #fff5fa;
-  border: 1px solid #e3b8d9;
-  border-radius: 12px;
-  padding: 30px 20px;
   margin-top: 20px;
-  box-shadow: 0 4px 10px rgba(179, 82, 154, 0.08);
 }
 
 .team-logo {
-  width: 120px;
+  max-width: 150px;
   margin-bottom: 15px;
+}
+
+.team-card p {
+  margin-bottom: 15px;
+  font-weight: normal; /* Texte régulier, pas gras par défaut */
+}
+
+.team-card ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.external-link {
+  margin-top: 10px;
+}
+
+.external-link a {
+  color: #b3529a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.external-link a:hover {
+  text-decoration: underline;
 }
