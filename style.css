@@ -182,37 +182,32 @@ footer {
   background-color: #f3d4e9;
 }
 
-.zones-grid {
+.zone-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .zone-card {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.zone-card small {
-  display: block;
-  font-weight: normal;
-  font-size: 0.9em;
-  margin-top: 5px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  line-height: 1.4;
+  transition: transform 0.2s ease;
 }
 
 .zone-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
-.kfashion { background-color: #f3e9ff; color: #5e3b8d; }
-.kbeauty  { background-color: #e3fce9; color: #29754a; }
-.kpop     { background-color: #fde4ef; color: #a83f6e; }
-.food     { background-color: #fff4d6; color: #a47000; }
-.culture  { background-color: rgba(255, 150, 150, 0.2); color: #b03030; }
-.tech     { background-color: #e1f0fb; color: #336b96; }
-.fan      { background-color: #eeeeee; color: #555555; }
+/* Color variants */
+.zone-card.violet { background: #f3e5f5; color: #4a148c; }
+.zone-card.green { background: #e0f2f1; color: #00695c; }
+.zone-card.pink { background: #fce4ec; color: #880e4f; }
+.zone-card.yellow { background: #fff8e1; color: #f57f17; }
+.zone-card.red { background: rgba(255, 205, 210, 0.8); color: #c62828; }
+.zone-card.blue { background: #e3f2fd; color: #1565c0; }
+.zone-card.gray { background: #eeeeee; color: #424242; }
