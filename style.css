@@ -1,6 +1,4 @@
-
-/* Base CSS for SKR Festival - Clean & Modern Style */
-
+/* ------------------ Reset & Base ------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +13,7 @@ body {
   padding: 20px;
 }
 
+/* ------------------ Header & Navigation ------------------ */
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
@@ -42,12 +41,40 @@ nav ul li a {
   text-decoration: none;
   color: #b3529a;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #e3b8d9;
 }
 
+/* ------------------ Sélecteur de langue ------------------ */
+.lang-selector {
+  text-align: right;
+  margin: 20px;
+}
+
+.lang-selector button {
+  background-color: #e3b8d9;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  margin-left: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.lang-selector button:hover,
+.lang-selector button:focus {
+  background-color: #b3529a;
+  color: white;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ------------------ Structure principale ------------------ */
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -69,7 +96,7 @@ footer {
   color: #b3529a;
 }
 
-/*CTA BUTTON*/
+/* ------------------ Boutons CTA ------------------ */
 .cta-button {
   display: inline-block;
   background-color: #e3b8d9;
@@ -79,61 +106,64 @@ footer {
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-.cta-button:hover {
-  background-color: #e3b8d9;
-}
-
-/*LANGUAGE BUTTONS*/
-.lang-selector {
-  text-align: right;
-  margin: 20px;
-}
-
-.lang-selector button {
-  background-color: #e3b8d9; /* rose clair */
-  color: #333;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 14px;
-  margin-left: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.lang-selector button:hover {
-  background-color: #b3529a;
-  color: white;
-  transform: scale(1.05);
-}
-
-.lang-selector button:focus {
-  outline: none;
-  background-color: #b3529a;
-  color: white;
-}
-
-/*CTA BUTTON SURVOL*/
-.cta-button {
-  display: inline-block;
-  background-color: #e3b8d9;      /* Rose clair */
-  color: #fff;                   /*blanc*/
-  padding: 12px 18px;
-  margin: 10px 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #b3529a;      /* Violet rosé au survol */
-  color: #fff;                    /*blanc*/
-  transform: translateY(-2px);    /* Petit effet d’élévation */
+  background-color: #b3529a;
+  transform: translateY(-2px);
 }
 
+.cta-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #b3529a;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* ------------------ Titres ------------------ */
+h2, h4 {
+  text-shadow: 0 2px 4px rgba(179, 82, 154, 0.15);
+}
+
+/* ------------------ Cartes : Avantages ------------------ */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.benefit-card {
+  background-color: #fce7f3;
+  border-left: 5px solid #b3529a;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #4b254c;
+  box-shadow: 0 3px 10px rgba(179, 82, 154, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: scale(1.03);
+  background-color: #f3d4e9;
+}
+
+/* ------------------ Cartes : Statistiques ------------------ */
 .stats-container {
   display: flex;
   flex-wrap: wrap;
@@ -159,29 +189,7 @@ footer {
   background-color: #f8daf0;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.benefit-card {
-  background-color: #fce7f3;
-  border-left: 5px solid #b3529a;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  color: #4b254c;
-  box-shadow: 0 3px 10px rgba(179, 82, 154, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: scale(1.03);
-  background-color: #f3d4e9;
-}
-
+/* ------------------ Cartes : Zones du village ------------------ */
 .zone-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -191,49 +199,10 @@ footer {
 
 .zone-card {
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  line-height: 1.4;
-  transition: transform 0.2s ease;
-}
-
-.zone-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Color variants */
-.zone-card.violet { background: #f3e5f5; color: #4a148c; }
-.zone-card.green { background: #e0f2f1; color: #00695c; }
-.zone-card.pink { background: #fce4ec; color: #880e4f; }
-.zone-card.yellow { background: #fff8e1; color: #f57f17; }
-.zone-card.red { background: rgba(255, 205, 210, 0.8); color: #c62828; }
-.zone-card.blue { background: #e3f2fd; color: #1565c0; }
-.zone-card.gray { background: #eeeeee; color: #424242; }
-
-.steps-list {
-  margin: 20px 0;
-  padding-left: 20px;
-  list-style: decimal;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.fan-zone {
-  grid-column: 1 / -1;
-  justify-self: center;
-  text-align: center;
-}
-
-/* ---- Zone Cards ---- */
-.zone-card {
-  padding: 20px;
   border-radius: 12px;
-  color: #333;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Ombre douce */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   animation: fadeUp 0.6s ease both;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -244,15 +213,32 @@ footer {
   transform: translateY(-4px);
 }
 
-/* ---- Grid ---- */
-.zone-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
+/* ---- Couleurs pour chaque zone ---- */
+.zone-card.violet { background: #f3e5f5; color: #4a148c; }
+.zone-card.green  { background: #e0f2f1; color: #00695c; }
+.zone-card.pink   { background: #fce4ec; color: #880e4f; }
+.zone-card.yellow { background: #fff8e1; color: #f57f17; }
+.zone-card.red    { background: rgba(255, 205, 210, 0.8); color: #c62828; }
+.zone-card.blue   { background: #e3f2fd; color: #1565c0; }
+.zone-card.gray   { background: #eeeeee; color: #424242; }
+
+/* Centrage pour la Fan Zone */
+.fan-zone {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: center;
 }
 
-/* ---- Animation ---- */
+/* ------------------ Étapes à suivre ------------------ */
+.steps-list {
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style: decimal;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ------------------ Animation fade-up ------------------ */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -262,33 +248,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* ---- Glow sur titres ---- */
-h2, h4 {
-  text-shadow: 0 2px 4px rgba(179, 82, 154, 0.15);
-}
-
-/* ---- CTA Buttons underline animation ---- */
-.cta-button {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.cta-button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background-color: #b3529a;
-  transition: all 0.3s ease;
-  z-index: -1;
-}
-
-.cta-button:hover::after {
-  left: 0;
-  width: 100%;
 }
