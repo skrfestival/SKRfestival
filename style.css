@@ -181,3 +181,38 @@ footer {
   transform: scale(1.03);
   background-color: #f3d4e9;
 }
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.zone-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.zone-card small {
+  display: block;
+  font-weight: normal;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.zone-card:hover {
+  transform: scale(1.03);
+}
+
+.kfashion { background-color: #f3e9ff; color: #5e3b8d; }
+.kbeauty  { background-color: #e3fce9; color: #29754a; }
+.kpop     { background-color: #fde4ef; color: #a83f6e; }
+.food     { background-color: #fff4d6; color: #a47000; }
+.culture  { background-color: rgba(255, 150, 150, 0.2); color: #b03030; }
+.tech     { background-color: #e1f0fb; color: #336b96; }
+.fan      { background-color: #eeeeee; color: #555555; }
