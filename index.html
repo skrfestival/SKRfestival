@@ -1,120 +1,73 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SKR Festival - Accueil</title>
-  <link rel="stylesheet" href="/SKRfestival/style.css">
-  <style>
-    .lang { display: none; }
-    .active-lang { display: block; }
-    .lang-selector {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-    .lang-selector button {
-      margin-left: 10px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #b3529a;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="lang-selector">
-      <span>Language:</span>
-      <button onclick="switchLang('en')">EN</button>
-      <button onclick="switchLang('fr')">FR</button>
-      <button onclick="switchLang('ko')">KO</button>
+<main>
+  <!-- Bannière visuelle principale (image ou vidéo à intégrer plus tard) -->
+  <section class="hero-section">
+    <div class="hero-text lang lang-en active-lang">
+      <h2 class="fade-in">“When Korea becomes a story to live, here in France.”</h2>
     </div>
-    <h1>SKR Festival</h1>
-    <nav>
-      <ul>
-        <!-- Accueil -->
-        <li class="lang lang-en active-lang"><a href="index.html">Home</a></li>
-        <li class="lang lang-fr"><a href="index.html">Accueil</a></li>
-        <li class="lang lang-ko"><a href="index.html">홈</a></li>
+    <div class="hero-text lang lang-fr">
+      <h2 class="fade-in">“Quand la Corée devient une histoire à vivre, ici en France.”</h2>
+    </div>
+    <div class="hero-text lang lang-ko">
+      <h2 class="fade-in">“한국이 프랑스에서 살아 숨 쉬는 이야기로.”</h2>
+    </div>
+  </section>
 
-        <!-- Sponsors -->
-        <li class="lang lang-en active-lang"><a href="sponsors.html">Sponsors</a></li>
-        <li class="lang lang-fr"><a href="sponsors.html">Sponsors</a></li>
-        <li class="lang lang-ko"><a href="sponsors.html">스폰서</a></li>
+  <!-- Bloc principal -->
+  <section class="intro">
+    <div class="lang lang-en active-lang">
+      <h3>A festival, a bridge between two vibrant cultures!</h3>
+      <p>The SKR FESTIVAL is a cultural bridge between Korea and France, celebrating the emerging K-pop scene and tomorrow’s talents.</p>
+      <p>It brings together established artists, rising stars, and young French talents on one stage, in a village with 40 immersive stands.</p>
+    </div>
+    <div class="lang lang-fr">
+      <h3>Un festival, un pont entre deux cultures en pleine effervescence !</h3>
+      <p>Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain.</p>
+      <p>Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français dans un village dédié à la culture coréenne avec 40 stands immersifs.</p>
+    </div>
+    <div class="lang lang-ko">
+      <h3>열정적인 두 문화를 잇는 축제!</h3>
+      <p>SKR 페스티벌은 떠오르는 K-pop과 내일의 재능을 축하하는 한불 문화 교류의 다리입니다.</p>
+      <p>검증된 아티스트, 신예 스타, 프랑스의 신인들이 40개의 체험형 부스가 있는 마을에서 함께합니다.</p>
+    </div>
 
-        <!-- Exposants -->
-        <li class="lang lang-en active-lang"><a href="exposants.html">Exhibitors</a></li>
-        <li class="lang lang-fr"><a href="exposants.html">Exposants</a></li>
-        <li class="lang lang-ko"><a href="exposants.html">출전 업체</a></li>
+    <!-- CTA buttons -->
+    <a href="exposants.html" class="cta-button lang lang-en active-lang">📩 I want to exhibit</a>
+    <a href="exposants.html" class="cta-button lang lang-fr">📩 Je veux exposer</a>
+    <a href="exposants.html" class="cta-button lang lang-ko">📩 부스로 참가하고 싶어요</a>
 
-        <!-- Équipe -->
-        <li class="lang lang-en active-lang"><a href="equipe.html">Team</a></li>
-        <li class="lang lang-fr"><a href="equipe.html">Équipe</a></li>
-        <li class="lang lang-ko"><a href="equipe.html">팀</a></li>
+    <a href="sponsors.html" class="cta-button lang lang-en active-lang">🤝 I want to sponsor</a>
+    <a href="sponsors.html" class="cta-button lang lang-fr">🤝 Je veux sponsoriser</a>
+    <a href="sponsors.html" class="cta-button lang lang-ko">🤝 스폰서가 되고 싶어요</a>
 
-        <!-- Budget -->
-        <li class="lang lang-en active-lang"><a href="budget.html">Budget</a></li>
-        <li class="lang lang-fr"><a href="budget.html">Budget</a></li>
-        <li class="lang lang-ko"><a href="budget.html">예산</a></li>
+    <a href="programme.html" class="cta-button lang lang-en active-lang">🟢 See full program</a>
+    <a href="programme.html" class="cta-button lang lang-fr">🟢 Découvrir le programme complet</a>
+    <a href="programme.html" class="cta-button lang lang-ko">🟢 전체 프로그램 보기</a>
+  </section>
 
-        <!-- Moodboard -->
-        <li class="lang lang-en active-lang"><a href="moodboard.html">Moodboard</a></li>
-        <li class="lang lang-fr"><a href="moodboard.html">Moodboard</a></li>
-        <li class="lang lang-ko"><a href="moodboard.html">무드보드</a></li>
+  <!-- Vision long terme -->
+  <section class="vision">
+    <div class="lang lang-en active-lang">
+      <h3>A long-term vision</h3>
+      <p>SKR FESTIVAL is the first step in a series of upcoming events between France and Korea.</p>
+      <p>It embodies a collaborative dynamic for brands, institutions, artists, and media.</p>
+    </div>
+    <div class="lang lang-fr">
+      <h3>Une vision à long terme</h3>
+      <p>Le SKR FESTIVAL est le premier jalon d’une série d’événements à venir entre la France et la Corée.</p>
+      <p>Il incarne une dynamique collaborative entre marques, institutions, artistes et médias.</p>
+    </div>
+    <div class="lang lang-ko">
+      <h3>장기적인 비전</h3>
+      <p>SKR 페스티벌은 한불 간 향후 이벤트 시리즈의 첫걸음입니다.</p>
+      <p>브랜드, 기관, 아티스트, 미디어가 함께하는 협업의 상징입니다.</p>
+    </div>
+  </section>
 
-        <!-- Contact -->
-        <li class="lang lang-en active-lang"><a href="contact.html">Contact</a></li>
-        <li class="lang lang-fr"><a href="contact.html">Contact</a></li>
-        <li class="lang lang-ko"><a href="contact.html">문의하기</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h2 class="lang lang-en active-lang">Home</h2>
-    <h2 class="lang lang-fr">Accueil</h2>
-    <h2 class="lang lang-ko">홈</h2>
-    <p class="lang lang-en">This is the English content for the Home page.</p>
-    <p class="lang lang-fr">Ceci est le contenu français pour la page Accueil.</p>
-    <p class="lang lang-ko">이것은 홈 페이지에 대한 한국어 콘텐츠입니다.</p>
-    <!-- CTA: devenir sponsor -->
-<a href="sponsors.html" class="cta-button lang lang-en active-lang">🤝 Become a Sponsor</a>
-<a href="sponsors.html" class="cta-button lang lang-fr">🤝 Devenir Sponsor</a>
-<a href="sponsors.html" class="cta-button lang lang-ko">🤝 스폰서 되기</a>
-
-<!-- CTA: devenir exposant -->
-<a href="exposants.html" class="cta-button lang lang-en active-lang">📩 Exhibit at SKR Festival</a>
-<a href="exposants.html" class="cta-button lang lang-fr">📩 Devenir exposant</a>
-<a href="exposants.html" class="cta-button lang lang-ko">📩 부스 참가 신청</a>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 SKR Festival</p>
-  </footer>
-
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('.lang').forEach(el => {
-        el.classList.remove('active-lang');
-      });
-      document.querySelectorAll(`.lang-` + lang).forEach(el => {
-        el.classList.add('active-lang');
-      });
-    }
-  </script>
-</body>
-</html>
+  <!-- Logos partenaires -->
+  <section class="partners">
+    <div class="lang active-lang">
+      <p class="centered">SBYME | Arirang TV | KARMV | OCCIPOP</p>
+      <p class="centered small">Télédiffusion, production artistique & coordination France–Corée</p>
+    </div>
+  </section>
+</main>
