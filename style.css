@@ -249,3 +249,23 @@ h2, h4 {
     transform: translateY(0);
   }
 }
+
+/* ==== SECTION ÉQUIPE - Carte organisateur (ex: SBYME) ==== */
+.team-section {
+  margin: 40px 0;
+}
+
+.team-card {
+  text-align: center;
+  background: #fff5fa;
+  border: 1px solid #e3b8d9;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(179, 82, 154, 0.08);
+}
+
+.team-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
