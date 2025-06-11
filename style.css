@@ -279,20 +279,6 @@ h2, h4 {
   text-align: left;
 }
 
-.external-link {
-  margin-top: 10px;
-}
-
-.external-link a {
-  color: #b3529a;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.external-link a:hover {
-  text-decoration: underline;
-}
-
 /* === Section 4 - Naissance du projet (Image uniquement) === */
 .team-image {
   max-width: 100%;
