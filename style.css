@@ -219,3 +219,9 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+.fan-zone {
+  margin: 0 auto;
+  text-align: center;
+  flex-basis: 100%;
+}
