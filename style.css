@@ -158,3 +158,25 @@ footer {
   transform: scale(1.05);
   background-color: #f8daf0;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  background: #f8eaf4;
+  border-left: 5px solid #b3529a;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  color: #4b254c;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(179, 82, 154, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #f3d4e9;
+}
