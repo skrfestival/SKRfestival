@@ -133,3 +133,28 @@ footer {
   color: #fff;                    /*blanc*/
   transform: translateY(-2px);    /* Petit effet d’élévation */
 }
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background-color: #fcecf5;
+  border: 1px solid #e3b8d9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #b3529a;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+  background-color: #f8daf0;
+}
