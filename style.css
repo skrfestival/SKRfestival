@@ -1,4 +1,4 @@
-/* ------------------ Reset & Base ------------------ */
+/* ===================== RESET & BASE ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +7,23 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff7fd;
-  color: #b3529a;
+  background-color: #f8f8f8;
+  color: #444;
   line-height: 1.6;
   padding: 20px;
 }
 
-/* ------------------ Header & Navigation ------------------ */
+/* ===================== HEADER & NAVIGATION ===================== */
 header {
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   padding: 20px 0;
   margin-bottom: 30px;
 }
 
 header h1 {
   text-align: center;
-  color: #b3529a;
+  color: #444;
 }
 
 nav ul {
@@ -39,23 +39,23 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #b3529a;
+  color: #444;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #e3b8d9;
+  color: #888;
 }
 
-/* ------------------ Sélecteur de langue ------------------ */
+/* ===================== LANGUE SELECTOR ===================== */
 .lang-selector {
   text-align: right;
   margin: 20px;
 }
 
 .lang-selector button {
-  background-color: #e3b8d9;
+  background-color: #ddd;
   color: #333;
   border: none;
   border-radius: 20px;
@@ -68,19 +68,19 @@ nav ul li a:hover {
 
 .lang-selector button:hover,
 .lang-selector button:focus {
-  background-color: #b3529a;
+  background-color: #bbb;
   color: white;
   transform: scale(1.05);
   outline: none;
 }
 
-/* ------------------ Structure principale ------------------ */
+/* ===================== MAIN CONTENT STRUCTURE ===================== */
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   background: #ffffff;
-  border: 1px solid #f2e6ef;
+  border: 1px solid #ddd;
   border-radius: 8px;
 }
 
@@ -93,13 +93,13 @@ footer {
   margin-top: 40px;
   padding: 20px;
   font-size: 0.9em;
-  color: #b3529a;
+  color: #777;
 }
 
-/* ------------------ Boutons CTA ------------------ */
+/* ===================== BOUTONS CTA ===================== */
 .cta-button {
   display: inline-block;
-  background-color: #e3b8d9;
+  background-color: #bbb;
   color: #fff;
   padding: 12px 18px;
   margin: 10px 5px;
@@ -113,7 +113,7 @@ footer {
 }
 
 .cta-button:hover {
-  background-color: #b3529a;
+  background-color: #999;
   transform: translateY(-2px);
 }
 
@@ -124,7 +124,7 @@ footer {
   left: 50%;
   width: 0;
   height: 3px;
-  background-color: #b3529a;
+  background-color: #777;
   transition: all 0.3s ease;
   z-index: -1;
 }
@@ -134,12 +134,12 @@ footer {
   width: 100%;
 }
 
-/* ------------------ Titres ------------------ */
+/* ===================== TITRES ===================== */
 h2, h4 {
-  text-shadow: 0 2px 4px rgba(179, 82, 154, 0.15);
+  text-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
 }
 
-/* ------------------ Cartes : Avantages ------------------ */
+/* ===================== AVANTAGES / BENEFITS ===================== */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -148,22 +148,22 @@ h2, h4 {
 }
 
 .benefit-card {
-  background-color: #fce7f3;
-  border-left: 5px solid #b3529a;
+  background-color: #f4f4f4;
+  border-left: 5px solid #999;
   padding: 15px 20px;
   border-radius: 8px;
   font-weight: 500;
-  color: #4b254c;
-  box-shadow: 0 3px 10px rgba(179, 82, 154, 0.1);
+  color: #333;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .benefit-card:hover {
   transform: scale(1.03);
-  background-color: #f3d4e9;
+  background-color: #eaeaea;
 }
 
-/* ------------------ Cartes : Statistiques ------------------ */
+/* ===================== STATISTIQUES ===================== */
 .stats-container {
   display: flex;
   flex-wrap: wrap;
@@ -173,12 +173,12 @@ h2, h4 {
 }
 
 .stat-box {
-  background-color: #fcecf5;
-  border: 1px solid #e3b8d9;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
   padding: 15px 20px;
   border-radius: 10px;
   font-weight: bold;
-  color: #b3529a;
+  color: #555;
   min-width: 220px;
   text-align: center;
   transition: transform 0.2s ease;
@@ -186,10 +186,10 @@ h2, h4 {
 
 .stat-box:hover {
   transform: scale(1.05);
-  background-color: #f8daf0;
+  background-color: #e0e0e0;
 }
 
-/* ------------------ Cartes : Zones du village ------------------ */
+/* ===================== ZONES DU VILLAGE (colorées) ===================== */
 .zone-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -213,7 +213,6 @@ h2, h4 {
   transform: translateY(-4px);
 }
 
-/* ---- Couleurs pour chaque zone ---- */
 .zone-card.violet { background: #f3e5f5; color: #4a148c; }
 .zone-card.green  { background: #e0f2f1; color: #00695c; }
 .zone-card.pink   { background: #fce4ec; color: #880e4f; }
@@ -222,14 +221,13 @@ h2, h4 {
 .zone-card.blue   { background: #e3f2fd; color: #1565c0; }
 .zone-card.gray   { background: #eeeeee; color: #424242; }
 
-/* Centrage pour la Fan Zone */
 .fan-zone {
   grid-column: 1 / -1;
   justify-self: center;
   text-align: center;
 }
 
-/* ------------------ Étapes à suivre ------------------ */
+/* ===================== ÉTAPES / STEPS ===================== */
 .steps-list {
   margin: 20px 0;
   padding-left: 20px;
@@ -238,7 +236,7 @@ h2, h4 {
   line-height: 1.6;
 }
 
-/* ------------------ Animation fade-up ------------------ */
+/* ===================== ANIMATION FADE-UP ===================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -250,13 +248,13 @@ h2, h4 {
   }
 }
 
-/* === ÉQUIPE / TEAM – Structure et style === */
+/* ===================== ÉQUIPE / TEAM ===================== */
 .team-section {
   margin: 40px 0;
   padding: 20px;
-  background-color: #fff7fd;
+  background-color: #f4f4f4;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(179, 82, 154, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .team-card {
@@ -271,7 +269,7 @@ h2, h4 {
 
 .team-card p {
   margin-bottom: 15px;
-  font-weight: normal; /* Texte régulier, pas gras par défaut */
+  font-weight: normal;
 }
 
 .team-card ul {
@@ -279,7 +277,7 @@ h2, h4 {
   text-align: left;
 }
 
-/* === Section 4 - Naissance du projet (Image uniquement) === */
+/* ===================== NAISSANCE DU PROJET (Image) ===================== */
 .team-image {
   max-width: 100%;
   height: auto;
@@ -287,7 +285,7 @@ h2, h4 {
   margin-bottom: 15px;
 }
 
-/*images*/
+/* ===================== IMAGES GÉNÉRALES ===================== */
 .section-image {
   max-width: 100%;
   height: auto;
