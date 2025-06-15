@@ -1,75 +1,46 @@
 // Fonction pour initialiser un carrousel spécifique
-function initCarousel(carouselSelector, interval = 3000) {
-  const carousel = document.querySelector(carouselSelector);
-  if (!carousel) return;
+function initCarousel(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-  const images = carousel.querySelectorAll(".carousel-images img");
-  const dots = carousel.querySelectorAll(".carousel-dots .dot");
-  const btnPrev = carousel.querySelector(".carousel-btn.prev");
-  const btnNext = carousel.querySelector(".carousel-btn.next");
+  const images = container.querySelectorAll(".carousel-images img");
+  const dots = container.querySelectorAll(".carousel-dots .dot");
+  let index = 0;
 
-  let currentIndex = 0;
-  let autoplay;
-
-  function showSlide(index) {
-    if (index >= images.length) index = 0;
-    if (index < 0) index = images.length - 1;
-
-    carousel.querySelector(".carousel-images").style.transform = `translateX(-${index * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove("active"));
-    if (dots[index]) dots[index].classList.add("active");
-
-    currentIndex = index;
+  function showSlide(i) {
+    images.forEach((img, idx) => {
+      img.classList.toggle("active", idx === i);
+    });
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === i);
+    });
+    index = i;
   }
 
   function nextSlide() {
-    showSlide(currentIndex + 1);
+    showSlide((index + 1) % images.length);
   }
 
-  function prevSlide() {
-    showSlide(currentIndex - 1);
-  }
+  container.querySelector(".prev")?.addEventListener("click", () => {
+    showSlide((index - 1 + images.length) % images.length);
+  });
 
-  function startAutoplay() {
-    autoplay = setInterval(nextSlide, interval);
-  }
-
-  function stopAutoplay() {
-    clearInterval(autoplay);
-  }
-
-  // Event listeners
-  btnNext?.addEventListener("click", () => {
+  container.querySelector(".next")?.addEventListener("click", () => {
     nextSlide();
-    stopAutoplay();
-    startAutoplay();
   });
 
-  btnPrev?.addEventListener("click", () => {
-    prevSlide();
-    stopAutoplay();
-    startAutoplay();
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => showSlide(i));
   });
 
-  dots.forEach((dot, i) =>
-    dot.addEventListener("click", () => {
-      showSlide(i);
-      stopAutoplay();
-      startAutoplay();
-    })
-  );
+  // Autoplay
+  setInterval(nextSlide, 4000);
 
-  carousel.addEventListener("mouseenter", stopAutoplay);
-  carousel.addEventListener("mouseleave", startAutoplay);
-
-  // Start
   showSlide(0);
-  startAutoplay();
 }
 
-// Initialise les deux carrousels
+// Initialisation de chaque carrousel
 document.addEventListener("DOMContentLoaded", () => {
-  initCarousel(".carousel-logo", 3500);
-  initCarousel(".carousel-designers", 4000);
+  initCarousel(".carousel-logo");
+  initCarousel(".carousel-designers");
 });
