@@ -1,64 +1,75 @@
-function initCarousel(selector, interval = 4000) {
-  const carousel = document.querySelector(selector);
+// Fonction pour initialiser un carrousel spécifique
+function initCarousel(carouselSelector, interval = 3000) {
+  const carousel = document.querySelector(carouselSelector);
   if (!carousel) return;
 
   const images = carousel.querySelectorAll(".carousel-images img");
-  const dots = carousel.querySelectorAll(".dot");
-  const prevBtn = carousel.querySelector(".carousel-btn.prev");
-  const nextBtn = carousel.querySelector(".carousel-btn.next");
+  const dots = carousel.querySelectorAll(".carousel-dots .dot");
+  const btnPrev = carousel.querySelector(".carousel-btn.prev");
+  const btnNext = carousel.querySelector(".carousel-btn.next");
 
   let currentIndex = 0;
-  let timer;
+  let autoplay;
 
   function showSlide(index) {
-    images.forEach((img, i) => {
-      img.classList.toggle("active", i === index);
-      if (dots[i]) dots[i].classList.toggle("active", i === index);
-    });
+    if (index >= images.length) index = 0;
+    if (index < 0) index = images.length - 1;
+
+    carousel.querySelector(".carousel-images").style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+
     currentIndex = index;
   }
 
   function nextSlide() {
-    const nextIndex = (currentIndex + 1) % images.length;
-    showSlide(nextIndex);
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
   }
 
   function startAutoplay() {
-    stopAutoplay();
-    timer = setInterval(nextSlide, interval);
+    autoplay = setInterval(nextSlide, interval);
   }
 
   function stopAutoplay() {
-    if (timer) clearInterval(timer);
+    clearInterval(autoplay);
   }
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      showSlide((currentIndex - 1 + images.length) % images.length);
-      startAutoplay();
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      startAutoplay();
-    });
-  }
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      showSlide(i);
-      startAutoplay();
-    });
+  // Event listeners
+  btnNext?.addEventListener("click", () => {
+    nextSlide();
+    stopAutoplay();
+    startAutoplay();
   });
 
-  showSlide(currentIndex);
+  btnPrev?.addEventListener("click", () => {
+    prevSlide();
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  dots.forEach((dot, i) =>
+    dot.addEventListener("click", () => {
+      showSlide(i);
+      stopAutoplay();
+      startAutoplay();
+    })
+  );
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  // Start
+  showSlide(0);
   startAutoplay();
 }
 
 // Initialise les deux carrousels
 document.addEventListener("DOMContentLoaded", () => {
-  initCarousel(".carousel-designers");
-  initCarousel(".carousel-logo");
+  initCarousel(".carousel-logo", 3500);
+  initCarousel(".carousel-designers", 4000);
 });
