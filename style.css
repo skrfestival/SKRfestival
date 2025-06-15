@@ -295,7 +295,8 @@ h2, h4 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ===================== CARROUSELS DESIGNERS & LOGOS ===================== */
+/* ===================== CARROUSELS ===================== */
+
 .carousel-logo,
 .carousel-designers {
   position: relative;
@@ -306,52 +307,52 @@ h2, h4 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.carousel-logo .carousel-images,
-.carousel-designers .carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-logo .carousel-images img,
-.carousel-designers .carousel-images img {
+.carousel-images img {
   width: 100%;
-  flex-shrink: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
   border-radius: 10px;
 }
 
-.carousel-logo .carousel-btn,
-.carousel-designers .carousel-btn {
+.carousel-images img.active {
+  display: block;
+}
+
+/* Flèches */
+.carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.4);
   color: white;
   font-size: 2rem;
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 1;
+  z-index: 2;
   border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-.carousel-logo .carousel-btn.prev,
-.carousel-designers .carousel-btn.prev {
-  left: 15px;
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.6);
 }
 
-.carousel-logo .carousel-btn.next,
-.carousel-designers .carousel-btn.next {
-  right: 15px;
+.carousel-btn.prev {
+  left: 10px;
 }
 
-.carousel-logo .carousel-dots,
-.carousel-designers .carousel-dots {
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Dots */
+.carousel-dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
-.carousel-logo .carousel-dots .dot,
-.carousel-designers .carousel-dots .dot {
+.carousel-dots .dot {
   height: 12px;
   width: 12px;
   margin: 0 5px;
@@ -362,14 +363,13 @@ h2, h4 {
   transition: background-color 0.3s;
 }
 
-.carousel-logo .carousel-dots .dot.active,
-.carousel-designers .carousel-dots .dot.active {
-  background-color: #555;
+.carousel-dots .dot.active {
+  background-color: #333;
 }
 
+/* Responsive flèches */
 @media (max-width: 768px) {
-  .carousel-logo .carousel-btn,
-  .carousel-designers .carousel-btn {
+  .carousel-btn {
     font-size: 1.5rem;
     padding: 6px;
   }
