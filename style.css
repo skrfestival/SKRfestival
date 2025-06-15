@@ -76,14 +76,14 @@ nav ul li a:hover {
 
 /* ===================== MAIN CONTENT STRUCTURE ===================== */
 main {
-  max-width: 800px;
+  width: 100%;
+  max-width: 1400px; /* optionnel, pour éviter que ce soit trop étiré sur très grands écrans */
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
 }
-
 section {
   margin-bottom: 30px;
 }
