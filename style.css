@@ -374,3 +374,56 @@ h2, h4 {
     padding: 6px;
   }
 }
+
+/* ===================== COULEURS RAFFINÉES ===================== */
+
+/* Titres principaux */
+h1, h2, h3 {
+  color: #1c3d5a;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f4f8;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Boutons CTA */
+.cta-button {
+  background-color: #2d87c8;
+  color: white;
+}
+
+.cta-button:hover {
+  background-color: #256ba3;
+}
+
+.cta-button::after {
+  background-color: #1b4d77;
+}
+
+/* Liens navigation */
+nav ul li a {
+  color: #1c3d5a;
+}
+
+nav ul li a:hover {
+  color: #2d87c8;
+}
+
+/* Langue selector */
+.lang-selector button {
+  background-color: #e0ecf5;
+  color: #1c3d5a;
+}
+
+.lang-selector button:hover {
+  background-color: #c3dcef;
+  color: #0e2439;
+}
+
+/* Carousel dots actives */
+.carousel-dots .dot.active {
+  background-color: #2d87c8;
+}
