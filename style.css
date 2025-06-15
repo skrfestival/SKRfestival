@@ -295,8 +295,8 @@ h2, h4 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.carousel-designers,
-.carousel-logo {
+/* === CARROUSEL BASE COMMUN POUR TOUS === */
+.carousel {
   position: relative;
   max-width: 800px;
   margin: 40px auto;
@@ -316,6 +316,7 @@ h2, h4 {
   display: block;
 }
 
+/* === FLÈCHES === */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -330,14 +331,10 @@ h2, h4 {
   border-radius: 50%;
 }
 
-.carousel-btn.prev {
-  left: 15px;
-}
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
 
-.carousel-btn.next {
-  right: 15px;
-}
-
+/* === DOTS === */
 .carousel-dots {
   text-align: center;
   margin-top: 10px;
@@ -358,7 +355,25 @@ h2, h4 {
   background-color: #555;
 }
 
-/* Responsive */
+/* === SPÉCIFIQUE AU CARROUSEL DESIGNERS === */
+.carousel-designers .carousel-btn {
+  background-color: rgba(255, 0, 100, 0.6);
+}
+
+.carousel-designers .carousel-dots .dot.active {
+  background-color: #ff0066;
+}
+
+/* === SPÉCIFIQUE AU CARROUSEL LOGOS === */
+.carousel-logo .carousel-btn {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-logo .carousel-dots .dot.active {
+  background-color: #333;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .carousel-btn {
     font-size: 1.5rem;
