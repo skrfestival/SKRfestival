@@ -6,11 +6,6 @@
   --color-secondary: #584F52;
   --color-background: #FFFFFF;
   --color-text: #000000;
-  --color-light: #F8F8F8;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -18,117 +13,54 @@ body {
   font-family: 'Glacial Indifference', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
-  line-height: 1.6;
 }
 
 header {
   background-color: var(--color-primary);
   color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
-  padding: 0;
+  gap: 1rem;
   margin: 0;
+  padding: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .language-switcher button {
-  margin-left: 0.5rem;
   background: transparent;
   border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
   color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?fit=crop&w=1600&q=80') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+main {
   padding: 2rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  background-color: rgba(0,0,0,0.6);
-  padding: 1rem;
-  border-radius: 10px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-main section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-button {
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--color-secondary);
+section {
+  margin-bottom: 3rem;
 }
 
 footer {
   background-color: var(--color-primary);
   color: white;
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 4rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-  margin-left: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 html {
