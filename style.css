@@ -57,37 +57,13 @@ html {
   cursor: pointer;
 }
 
-/* Menu responsive */
+/* Menu toujours visible en haut */
 nav ul {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background-color: var(--color-primary);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    display: none;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-background);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-  }
+  gap: 1rem;
+  justify-content: center;
 }
 
 .menu-toggle {
