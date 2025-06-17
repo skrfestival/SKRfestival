@@ -2,51 +2,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SKR Festival</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>SKR FESTIVAL</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="language-switcher">
-      <button onclick="setLanguage('fr')">🇫🇷</button>
-      <button onclick="setLanguage('en')">🇬🇧</button>
-      <button onclick="setLanguage('ko')">🇰🇷</button>
-    </div>
+
+<header>
+    <div class="logo">SKR FESTIVAL</div>
     <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#festival">SKR Festival</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#exposants">Exposants</a></li>
-        <li><a href="#team">Équipe</a></li>
-        <li><a href="#budget">Budget</a></li>
-        <li><a href="#moodboard">Moodboard</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <a href="#accueil" data-i18n="accueil">Accueil</a>
+        <a href="#skr" data-i18n="skr">SKR Festival</a>
+        <a href="#sponsors" data-i18n="sponsors">Sponsors</a>
+        <a href="#exposants" data-i18n="exposants">Exposants</a>
+        <a href="#equipe" data-i18n="equipe">Équipe</a>
+        <a href="#budget" data-i18n="budget">Budget</a>
+        <a href="#moodboard" data-i18n="moodboard">Moodboard</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
     </nav>
-  </header>
+    <div class="lang-switch">
+        <button onclick="setLanguage('fr')">FR</button>
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('ko')">KO</button>
+    </div>
+</header>
 
-  <main>
-    <section id="accueil">
-      <h1>Quand la Corée devient une histoire à vivre, ici en France.</h1>
-    </section>
-    <section id="festival"><h2>SKR Festival</h2><p>Contenu à remplir...</p></section>
-    <section id="sponsors"><h2>Sponsors</h2><p>Contenu à remplir...</p></section>
-    <section id="exposants"><h2>Exposants</h2><p>Contenu à remplir...</p></section>
-    <section id="team"><h2>Équipe</h2><p>Contenu à remplir...</p></section>
-    <section id="budget"><h2>Budget</h2><p>Contenu à remplir...</p></section>
-    <section id="moodboard"><h2>Moodboard</h2><p>Contenu à remplir...</p></section>
-    <section id="contact"><h2>Contact</h2><p>Contenu à remplir...</p></section>
-    <section id="mentions-legales"><h2>Mentions légales</h2><p>Contenu à remplir...</p></section>
-  </main>
+<section id="accueil" class="accueil-section">
+    <div class="gauche">
+        <h2><strong>UN FESTIVAL, UN PONT ENTRE DEUX CULTURES EN PLEINE FFFERVESCENCE</strong></h2>
+        <p>Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain. Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d'un village dédié à la culture coréenne avec 40 stands immersifs.</p>
+        <p>Le SKR FESTIVAL initie une dynamique franco-coréenne durable, rassemblant marques, institutions, artistes et médias autour d'une collaboration tournée vers l'avenir.</p>
+        <div class="buttons">
+            <a href="#exposants" class="btn-rose">Je veux exposer</a>
+            <a href="#sponsors" class="btn-rose">Je veux sponsoriser</a>
+        </div>
+    </div>
+    <div class="droite">
+        <div class="image-overlay">
+            <img src="images/concert.png" alt="concert">
+            <div class="overlay-text">"QUAND LA CORÉE DEVIENT UNE HISTOIRE À VIVRE, ICI EN FRANCE."</div>
+            <a href="#skr" class="btn-rose center-btn">Le SKR FESTIVAL</a>
+        </div>
+    </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 SKR Festival</p>
-    <a href="#mentions-legales">Mentions légales</a>
-  </footer>
+<!-- Additional empty sections for anchors -->
+<section id="skr"></section>
+<section id="sponsors"></section>
+<section id="exposants"></section>
+<section id="equipe"></section>
+<section id="budget"></section>
+<section id="moodboard"></section>
+<section id="contact"></section>
 
-  <script src="js/script.js"></script>
 </body>
 </html>

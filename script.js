@@ -1,20 +1,40 @@
 
 const translations = {
   fr: {
-    accueil: "Quand la Corée devient une histoire à vivre, ici en France.",
-    festival: "SKR Festival",
+    accueil: "Accueil",
+    skr: "SKR Festival",
+    sponsors: "Sponsors",
+    exposants: "Exposants",
+    equipe: "Équipe",
+    budget: "Budget",
+    moodboard: "Moodboard",
+    contact: "Contact"
   },
   en: {
-    accueil: "When Korea becomes a story to live, here in France.",
-    festival: "SKR Festival",
+    accueil: "Home",
+    skr: "SKR Festival",
+    sponsors: "Sponsors",
+    exposants: "Exhibitors",
+    equipe: "Team",
+    budget: "Budget",
+    moodboard: "Moodboard",
+    contact: "Contact"
   },
   ko: {
-    accueil: "한국이 프랑스에서 살아 숨 쉬는 이야기로.",
-    festival: "SKR 페스티벌",
+    accueil: "홈",
+    skr: "SKR 페스티벌",
+    sponsors: "스폰서",
+    exposants: "출전자",
+    equipe: "팀",
+    budget: "예산",
+    moodboard: "무드보드",
+    contact: "연락처"
   }
 };
 
 function setLanguage(lang) {
-  document.querySelector("#accueil h1").textContent = translations[lang].accueil;
-  document.querySelector("#festival h2").textContent = translations[lang].festival;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = translations[lang][key];
+  });
 }

@@ -1,68 +1,82 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
-
-:root {
-  --color-primary: #DB719B;
-  --color-secondary: #584F52;
-  --color-background: #FFFFFF;
-  --color-text: #000000;
-}
-
 body {
-  margin: 0;
-  font-family: 'Glacial Indifference', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
+    font-family: 'Glacial Indifference', sans-serif;
+    color: black;
+    margin: 0;
+    padding-top: 100px;
 }
-
 header {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
 nav a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
-
-.language-switcher button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
+.lang-switch button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
 }
-
-main {
-  padding: 2rem;
+.btn-rose {
+    background: #f76cae;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
 }
-
-section {
-  margin-bottom: 3rem;
+.image-overlay {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
 }
-
-footer {
-  background-color: var(--color-primary);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+.image-overlay img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    opacity: 0.6;
 }
-
-html {
-  scroll-behavior: smooth;
+.overlay-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+}
+.center-btn {
+    margin-top: 10px;
+}
+.accueil-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+}
+.gauche, .droite {
+    width: 45%;
+}
+@media screen and (max-width: 768px) {
+    .accueil-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gauche, .droite {
+        width: 90%;
+    }
 }
