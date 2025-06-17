@@ -1,181 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SKR Festival - Accueil</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .lang { display: none; }
-    .active-lang { display: block; }
-    .lang-selector {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-    .lang-selector button {
-      margin-left: 10px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #444;
-      font-weight: bold;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out both;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    .centered {
-      text-align: center;
-    }
-    .bold {
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKR Festival</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="lang-selector">
-      <span>Language:</span>
-      <button onclick="switchLang('en')">EN</button>
-      <button onclick="switchLang('fr')">FR</button>
-      <button onclick="switchLang('ko')">KO</button>
-    </div>
-    <h1>SKR Festival</h1>
+    <div class="langue">LANGUAGE: <a href="#">EN</a> <a href="#">FR</a> <a href="#">KO</a></div>
+    <h1>SKR FESTIVAL</h1>
     <nav>
       <ul>
-        <!-- Accueil -->
-        <li class="lang lang-en active-lang"><a href="index.html">Home</a></li>
-        <li class="lang lang-fr"><a href="index.html">Accueil</a></li>
-        <li class="lang lang-ko"><a href="index.html">홈</a></li>
-
-        <!-- SKR FEST -->
-        <li class="lang lang-en active-lang"><a href="festival.html">SKR FESTIVAL</a></li>
-        <li class="lang lang-fr"><a href="festival.html">SKR FESTIVAL</a></li>
-        <li class="lang lang-ko"><a href="festival.html">SKR FESTIVAL</a></li>
-        
-        <!-- Sponsors -->
-        <li class="lang lang-en active-lang"><a href="sponsors.html">Sponsors</a></li>
-        <li class="lang lang-fr"><a href="sponsors.html">Sponsors</a></li>
-        <li class="lang lang-ko"><a href="sponsors.html">스폰서</a></li>
-
-        <!-- Exposants -->
-        <li class="lang lang-en active-lang"><a href="exposants.html">Exhibitors</a></li>
-        <li class="lang lang-fr"><a href="exposants.html">Exposants</a></li>
-        <li class="lang lang-ko"><a href="exposants.html">출전 업체</a></li>
-
-        <!-- Équipe -->
-        <li class="lang lang-en active-lang"><a href="equipe.html">Team</a></li>
-        <li class="lang lang-fr"><a href="equipe.html">Équipe</a></li>
-        <li class="lang lang-ko"><a href="equipe.html">팀</a></li>
-
-        <!-- Budget -->
-        <li class="lang lang-en active-lang"><a href="budget.html">Budget</a></li>
-        <li class="lang lang-fr"><a href="budget.html">Budget</a></li>
-        <li class="lang lang-ko"><a href="budget.html">예산</a></li>
-
-        <!-- Moodboard -->
-        <li class="lang lang-en active-lang"><a href="moodboard.html">Moodboard</a></li>
-        <li class="lang lang-fr"><a href="moodboard.html">Moodboard</a></li>
-        <li class="lang lang-ko"><a href="moodboard.html">무드보드</a></li>
-
-        <!-- Contact -->
-        <li class="lang lang-en active-lang"><a href="contact.html">Contact</a></li>
-        <li class="lang lang-fr"><a href="contact.html">Contact</a></li>
-        <li class="lang lang-ko"><a href="contact.html">문의하기</a></li>
+        <li><a href="#">ACCUEIL</a></li>
+        <li><a href="#">SKR FESTIVAL</a></li>
+        <li><a href="#">SPONSORS</a></li>
+        <li><a href="#">EXPOSANTS</a></li>
+        <li><a href="#">ÉQUIPE</a></li>
+        <li><a href="#">BUDGET</a></li>
+        <li><a href="#">MOODBOARD_CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Slogan avec animation -->
-    <section class="hero-section fade-in centered">
-      <p class="lang lang-en active-lang">"When Korea becomes a story to live, here in France."</p>
-      <p class="lang lang-fr">"Quand la Corée devient une histoire à vivre, ici en France."</p>
-      <p class="lang lang-ko">"한국이 프랑스에서 살아 숨 쉬는 이야기가 될 때."</p>
-    </section>
-
-    <!-- Bloc principal -->
-    <section>
-      <h2 class="lang lang-en active-lang">A festival, a bridge between two vibrant cultures!</h2>
-      <h2 class="lang lang-fr">Un festival, un pont entre deux cultures en pleine effervescence !</h2>
-      <h2 class="lang lang-ko">두 문화 사이의 활기찬 다리, SKR 페스티벌!</h2>
-
-      <p class="lang lang-en active-lang">
-        The SKR FESTIVAL is a cultural bridge between Korea and France, celebrating the emerging K-pop scene and tomorrow’s talents.<br>
-        It brings together established artists, rising stars, and young French talents on one stage, in a village with 40 immersive stands.
+  <main class="hero-section">
+    <div class="hero-left">
+      <img src="concert.jpg" alt="Concert SKR">
+      <h2>"QUAND LA CORÉE DEVIENT UNE<br>HISTOIRE À VIVRE, ICI EN FRANCE."</h2>
+      <a href="#" class="btn primary">LE SKR FESTIVAL</a>
+    </div>
+    <div class="hero-right">
+      <h3>UN FESTIVAL, UN PONT ENTRE DEUX CULTURES EN PLEINE EFFERVESCENCE !</h3>
+      <p>
+        Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain.<br><br>
+        Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d’un village dédié à la culture coréenne avec 40 stands immersifs.<br><br>
+        Le SKR FESTIVAL initie une dynamique franco-coréenne durable, rassemblant marques, institutions, artistes et médias autour d’une collaboration tournée vers l’avenir.
       </p>
-      <p class="lang lang-fr">
-        Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain.<br>
-        Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d’un village dédié à la culture coréenne avec 40 stands immersifs.
-      </p>
-      <p class="lang lang-ko">
-        SKR 페스티벌은 떠오르는 K-팝과 내일의 재능을 축하하는 한-불 문화 교류의 다리입니다.<br>
-        40개의 몰입형 부스를 갖춘 마을 중심에서 다양한 아티스트가 함께 무대를 장식합니다.
-      </p>
-
-      <!-- CTA -->
-      <a href="exposants.html" class="cta-button lang lang-en active-lang">I want to exhibit</a>
-      <a href="exposants.html" class="cta-button lang lang-fr">Je veux exposer</a>
-      <a href="exposants.html" class="cta-button lang lang-ko">부스로 참가하고 싶어요</a>
-
-      <a href="sponsors.html" class="cta-button lang lang-en active-lang">I want to sponsor</a>
-      <a href="sponsors.html" class="cta-button lang lang-fr">Je veux sponsoriser</a>
-      <a href="sponsors.html" class="cta-button lang lang-ko">스폰서가 되고 싶어요</a>
-
-      <p class="lang lang-en active-lang">A unique event connecting brands, artists and fans around a rising K-culture.</p>
-      <p class="lang lang-fr">Un événement unique pour connecter les marques, les artistes et les fans autour d’une K-culture en pleine ascension.</p>
-      <p class="lang lang-ko">K-컬처의 상승을 함께하는 특별한 만남의 장.</p>
-
-      <!-- Programme -->
-      <a href="festival.html" class="cta-button lang lang-en active-lang">About SKR</a>
-      <a href="festival.html" class="cta-button lang lang-fr">À propos de SKR</a>
-      <a href="festival.html" class="cta-button lang lang-ko">SKR 소개</a>
-    </section>
-
-    <!-- Vision à long terme -->
-    <section>
-      <h2 class="lang lang-en active-lang">A long-term vision</h2>
-      <h2 class="lang lang-fr">Une vision à long terme</h2>
-      <h2 class="lang lang-ko">장기적인 비전</h2>
-
-      <p class="lang lang-en active-lang">
-        SKR FESTIVAL is the first step in a series of upcoming events between France and Korea.<br>
-        It embodies a collaborative dynamic between brands, institutions, artists and media.
-      </p>
-      <p class="lang lang-fr">
-        Le SKR FESTIVAL est le premier pas d’une série d’événements à venir entre la France et la Corée.<br>
-        Il incarne une dynamique collaborative où marques, institutions, artistes et médias peuvent évoluer ensemble.
-      </p>
-      <p class="lang lang-ko">
-        SKR 페스티벌은 한불 관계의 새로운 이벤트 시리즈의 시작입니다.<br>
-        브랜드, 기관, 예술가, 미디어 간의 협력적 흐름을 상징합니다.
-      </p>
-
-      <p class="centered bold lang lang-en active-lang">A project built for the future, driven by long-lasting connections.</p>
-      <p class="centered bold lang lang-fr">Un projet pensé pour l’avenir, porté par la création de liens durables.</p>
-      <p class="centered bold lang lang-ko">지속 가능한 연결을 위한 미래지향적인 프로젝트입니다.</p>
-    </section>
+      <div class="btn-group">
+        <a href="#" class="btn secondary">JE VEUX EXPOSER</a>
+        <a href="#" class="btn secondary">JE VEUX SPONSORISER</a>
+      </div>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 SKR Festival</p>
-  </footer>
-
-  <script src="lang.js"></script>
 </body>
 </html>
