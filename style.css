@@ -1,21 +1,23 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
+
 :root {
-  --color-primary: #4A90E2;
-  --color-secondary: #D0021B;
-  --color-background: #FFFFFF;
-  --color-text: #333333;
+  --color-primary: #DB719B;        /* Rose */
+  --color-secondary: #584F52;      /* Marron */
+  --color-background: #FFFFFF;     /* Blanc */
+  --color-text: #000000;           /* Noir */
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Glacial Indifference', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
 }
 
 header, footer {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-background);
   padding: 1rem;
 }
 
@@ -28,10 +30,10 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: var(--color-background);
   text-decoration: none;
 }
 
 footer a {
-  color: white;
+  color: var(--color-background);
 }
