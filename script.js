@@ -98,8 +98,3 @@ function setLanguage(lang) {
     }
   });
 }
-
-function toggleMenu() {
-  const navList = document.querySelector("nav ul");
-  navList.classList.toggle("show");
-}
