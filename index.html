@@ -11,7 +11,14 @@
 <body>
 
 <header>
-    <div class="logo">SKR FESTIVAL</div>
+    <div class="header-top">
+        <h1>SKR FESTIVAL</h1>
+        <div class="lang-switch">
+            <button onclick="setLanguage('fr')">FR</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('ko')">KO</button>
+        </div>
+    </div>
     <nav>
         <a href="#accueil" data-i18n="accueil">Accueil</a>
         <a href="#skr" data-i18n="skr">SKR Festival</a>
@@ -22,15 +29,17 @@
         <a href="#moodboard" data-i18n="moodboard">Moodboard</a>
         <a href="#contact" data-i18n="contact">Contact</a>
     </nav>
-    <div class="lang-switch">
-        <button onclick="setLanguage('fr')">FR</button>
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('ko')">KO</button>
-    </div>
 </header>
 
 <section id="accueil" class="accueil-section">
     <div class="gauche">
+        <div class="image-overlay">
+            <img src="images/concert.jpg" alt="concert">
+            <div class="overlay-text">"QUAND LA CORÉE DEVIENT UNE HISTOIRE À VIVRE, ICI EN FRANCE."</div>
+            <a href="#skr" class="btn-rose center-btn">Le SKR FESTIVAL</a>
+        </div>
+    </div>
+    <div class="droite">
         <h2><strong>UN FESTIVAL, UN PONT ENTRE DEUX CULTURES EN PLEINE FFFERVESCENCE</strong></h2>
         <p>Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain. Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d'un village dédié à la culture coréenne avec 40 stands immersifs.</p>
         <p>Le SKR FESTIVAL initie une dynamique franco-coréenne durable, rassemblant marques, institutions, artistes et médias autour d'une collaboration tournée vers l'avenir.</p>
@@ -39,16 +48,9 @@
             <a href="#sponsors" class="btn-rose">Je veux sponsoriser</a>
         </div>
     </div>
-    <div class="droite">
-        <div class="image-overlay">
-            <img src="images/concert.png" alt="concert">
-            <div class="overlay-text">"QUAND LA CORÉE DEVIENT UNE HISTOIRE À VIVRE, ICI EN FRANCE."</div>
-            <a href="#skr" class="btn-rose center-btn">Le SKR FESTIVAL</a>
-        </div>
-    </div>
 </section>
 
-<!-- Additional empty sections for anchors -->
+<!-- Empty sections for linking -->
 <section id="skr"></section>
 <section id="sponsors"></section>
 <section id="exposants"></section>

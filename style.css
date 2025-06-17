@@ -3,29 +3,47 @@ body {
     font-family: 'Glacial Indifference', sans-serif;
     color: black;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 140px;
 }
 header {
     background: white;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+}
+.header-top h1 {
+    margin: 0 auto;
+    font-weight: bold;
+}
+.lang-switch {
+    display: flex;
+    gap: 10px;
+}
+.lang-switch button {
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav {
+    padding: 10px 0;
 }
 nav a {
     margin: 0 10px;
     text-decoration: none;
     color: black;
-    font-weight: bold;
-}
-.lang-switch button {
-    margin-left: 10px;
-    padding: 5px 10px;
     font-weight: bold;
 }
 .btn-rose {
@@ -36,36 +54,30 @@ nav a {
     border-radius: 20px;
     margin: 5px;
     display: inline-block;
-    text-align: center;
 }
 .image-overlay {
     position: relative;
-    max-width: 100%;
     text-align: center;
 }
 .image-overlay img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 30px;
+    max-width: 350px;
+    border-radius: 20px;
     opacity: 0.6;
 }
 .overlay-text {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
     font-weight: bold;
-    text-align: center;
-    width: 90%;
-}
-.center-btn {
-    margin-top: 10px;
+    width: 80%;
 }
 .accueil-section {
     display: flex;
     justify-content: space-between;
-    padding: 80px 50px;
+    padding: 50px;
     flex-wrap: wrap;
 }
 .gauche, .droite {
