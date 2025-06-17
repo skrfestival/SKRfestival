@@ -3,38 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil - SKR Festival</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>SKR Festival - One Page Multilingue</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    
-<nav>
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="skr-festival.html">SKR Festival</a></li>
-    <li><a href="sponsor.html">Sponsor</a></li>
-    <li><a href="exposant.html">Exposant</a></li>
-    <li><a href="equipe.html">Équipe</a></li>
-    <li><a href="budget.html">Budget</a></li>
-    <li><a href="moodboard.html">Moodboard</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="language-switcher">
+      <button onclick="setLanguage('fr')">🇫🇷</button>
+      <button onclick="setLanguage('en')">🇬🇧</button>
+      <button onclick="setLanguage('ko')">🇰🇷</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#skr-festival" data-i18n="nav_festival">SKR Festival</a></li>
+        <li><a href="#sponsor" data-i18n="nav_sponsor">Sponsor</a></li>
+        <li><a href="#exposant" data-i18n="nav_exposant">Exposant</a></li>
+        <li><a href="#equipe" data-i18n="nav_equipe">Équipe</a></li>
+        <li><a href="#budget" data-i18n="nav_budget">Budget</a></li>
+        <li><a href="#moodboard" data-i18n="nav_moodboard">Moodboard</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <h1>Accueil</h1>
-    <p>Contenu à remplir...</p>
+    <section id="accueil">
+      <h1 data-i18n="home_title">Accueil</h1>
+      <p data-i18n="home_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="skr-festival">
+      <h2 data-i18n="festival_title">SKR Festival</h2>
+      <p data-i18n="festival_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="sponsor">
+      <h2 data-i18n="sponsor_title">Sponsor</h2>
+      <p data-i18n="sponsor_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="exposant">
+      <h2 data-i18n="exposant_title">Exposant</h2>
+      <p data-i18n="exposant_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="equipe">
+      <h2 data-i18n="equipe_title">Équipe</h2>
+      <p data-i18n="equipe_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="budget">
+      <h2 data-i18n="budget_title">Budget</h2>
+      <p data-i18n="budget_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="moodboard">
+      <h2 data-i18n="moodboard_title">Moodboard</h2>
+      <p data-i18n="moodboard_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="contact">
+      <h2 data-i18n="contact_title">Contact</h2>
+      <p data-i18n="contact_content">Contenu à remplir...</p>
+    </section>
+
+    <section id="mentions-legales">
+      <h2 data-i18n="legal_title">Mentions légales</h2>
+      <p data-i18n="legal_content">Contenu à remplir...</p>
+    </section>
   </main>
 
-  
-<footer>
-  <p>&copy; 2025 SKR Festival</p>
-  <a href="mentions-legales.html">Mentions légales</a>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 SKR Festival</p>
+    <a href="#mentions-legales" data-i18n="footer_legal">Mentions légales</a>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
