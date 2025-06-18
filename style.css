@@ -82,7 +82,12 @@ nav a {
 .overlay-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  height: 100%;
   padding: 20px;
 }
 
@@ -90,15 +95,7 @@ nav a {
   margin-top: 10px;
   display: inline-block;
 }
-.overlay-text {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    font-weight: bold;
-    width: 80%;
-}
+
 .accueil-section {
     display: flex;
     justify-content: space-between;
