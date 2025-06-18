@@ -31,22 +31,37 @@
 </header>
 
 <section id="accueil" class="accueil-section">
-    <div class="gauche">
-        <div class="image-overlay">
-            <img src="concert.jpg" alt="concert">
-            <div class="overlay-text">"QUAND LA CORÉE DEVIENT UNE HISTOIRE À VIVRE, ICI EN FRANCE."</div>
-            <a href="#skr" class="btn-rose center-btn">LE SKR FESTIVAL</a>
+  <!-- Partie gauche : image en fond avec texte centré -->
+  <div class="gauche">
+    <div class="image-overlay">
+      <img src="images/concert.jpg" alt="concert">
+      <div class="overlay-content">
+        <div data-i18n="accueil_overlay">
+          "QUAND LA CORÉE DEVIENT UNE HISTOIRE À VIVRE, ICI EN FRANCE."
         </div>
+        <a href="#skr" class="btn-rose center-btn" data-i18n="btn_le_skr">
+          Le SKR FESTIVAL
+        </a>
+      </div>
     </div>
-    <div class="droite">
-        <h2><strong>UN FESTIVAL, UN PONT ENTRE DEUX CULTURES EN PLEINE FFFERVESCENCE</strong></h2>
-        <p>Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain. Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d'un village dédié à la culture coréenne avec 40 stands immersifs.</p>
-        <p>Le SKR FESTIVAL initie une dynamique franco-coréenne durable, rassemblant marques, institutions, artistes et médias autour d'une collaboration tournée vers l'avenir.</p>
-        <div class="buttons">
-            <a href="#exposants" class="btn-rose">Je veux exposer</a>
-            <a href="#sponsors" class="btn-rose">Je veux sponsoriser</a>
-        </div>
+  </div>
+
+  <!-- Partie droite : texte explicatif + boutons -->
+  <div class="droite">
+    <h2><strong data-i18n="accueil_titre">
+      UN FESTIVAL, UN PONT ENTRE DEUX CULTURES EN PLEINE FFFERVESCENCE
+    </strong></h2>
+    <p data-i18n="accueil_paragraphe1">
+      Le SKR FESTIVAL est un pont culturel entre la Corée et la France, célébrant la scène K-pop émergente et les talents de demain. Il réunit artistes confirmés, artistes en pleine ascension et jeunes talents français sur une même scène, au cœur d'un village dédié à la culture coréenne avec 40 stands immersifs.
+    </p>
+    <p data-i18n="accueil_paragraphe2">
+      Le SKR FESTIVAL initie une dynamique franco-coréenne durable, rassemblant marques, institutions, artistes et médias autour d'une collaboration tournée vers l'avenir.
+    </p>
+    <div class="buttons">
+      <a href="#exposants" class="btn-rose" data-i18n="btn_exposer">Je veux exposer</a>
+      <a href="#sponsors" class="btn-rose" data-i18n="btn_sponsoriser">Je veux sponsoriser</a>
     </div>
+  </div>
 </section>
 
 <!-- Empty sections for linking -->
