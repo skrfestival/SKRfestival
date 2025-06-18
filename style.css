@@ -1,6 +1,12 @@
 
+@font-face {
+  font-family: 'Teachers';
+  src: url('fonts/Teachers-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Teachers', sans-serif;
     color: black;
     margin: 0;
     padding-top: 140px;
